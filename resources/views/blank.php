@@ -371,7 +371,7 @@
 
                 </div>
                 <div class='col-2 submitted'>
-                     <input class='submitted_input form-control '></input>
+                     <span class='submitted_label'></span>
 
                 </div>
                 <div class='col-2 total_value'>
@@ -397,7 +397,7 @@
 
                 </div>
                 <div class='col-2 total_value'>
-                   <span class='total_value_label'>asd</input>
+                   <span class='total_value_label'></input>
 
                 </div>
               </div>

@@ -18,6 +18,9 @@ $(document).on('click','#add_item_button', function()
 
 	$(x).attr('id','item_' + this_item);
 	$(x).addClass('item_row');
+
+	var now_datetime = new Date().toLocaleString();
+	$(x).find('.submitted_label').html(now_datetime);
 	$('#items_div').append(x);
 	$(x).show();
 
