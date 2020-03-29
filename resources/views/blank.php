@@ -359,7 +359,7 @@
           </div>
 
           <div id='sample_item' class='col-10 offset-1'>
-            <div class='row'>
+            <div class='row item_row'>
                 <div class='col-3 product_name'>
                   <input class='product_name_input form-control'></input>
                 </div>
@@ -379,6 +379,9 @@
 
                 </div>
               </div>
+          </div>
+
+          <div id='items_div'>
           </div>
 
 
