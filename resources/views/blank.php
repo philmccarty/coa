@@ -334,6 +334,10 @@
           <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
 
+          <div class='col-10'>
+            <a id='add_item_button' class='btn btn-lg btn-primary text-white'>Add New Item</a>
+          </div>
+          <BR>
           <div class='col-10 offset-1 well'>
             <div class='row'>
                 <div class='col-3'>
@@ -353,6 +357,27 @@
                 </div>
             </div>
           </div>
+
+          <div id='sample_item' class='col-10 offset-1'>
+            <div class='row'>
+                <div class='col-3 product_name'>
+              
+                </div>
+                <div class='col-2 in_stock'>
+                  
+                </div>
+                <div class='col-2 price_per_item'>
+                
+                </div>
+                <div class='col-2 submitted'>
+            
+                </div>
+                <div class='col-2 total_value'>
+          
+                </div>
+              </div>
+          </div>
+
 
 
 
@@ -417,7 +442,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="/js/sb-admin-2.min.js"></script>
-
+  <script src='/js/coa-test.js'></script>
 </body>
 
 </html>
