@@ -361,19 +361,22 @@
           <div id='sample_item' class='col-10 offset-1'>
             <div class='row'>
                 <div class='col-3 product_name'>
-              
+                  <input class='product_name_input form-control'></input>
                 </div>
                 <div class='col-2 in_stock'>
-                  
+                    <input class='in_stock_input form-control'></input>
                 </div>
                 <div class='col-2 price_per_item'>
-                
+                   <input class='price_per_item_input form-control'></input>
+
                 </div>
                 <div class='col-2 submitted'>
-            
+                     <input class='submitted_input form-control '></input>
+
                 </div>
                 <div class='col-2 total_value'>
-          
+                   <input class='total_value_input form-control '></input>
+
                 </div>
               </div>
           </div>
