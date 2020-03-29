@@ -358,8 +358,8 @@
             </div>
           </div>
 
-          <div id='sample_item' class='col-10 offset-1'>
-            <div class='row item_row'>
+          <div id='sample_item' class='col-10 offset-1' style='display:none;'>
+            <div class='row'>
                 <div class='col-3 product_name'>
                   <input class='product_name_input form-control'></input>
                 </div>
@@ -375,7 +375,7 @@
 
                 </div>
                 <div class='col-2 total_value'>
-                   <span class='total_value_label'>placehold</input>
+                   <span class='total_value_label'></input>
 
                 </div>
               </div>
@@ -384,7 +384,24 @@
           <div id='items_div'>
           </div>
 
+          <div id='total_calculation' class='col-10 offset-1'>
+            <div class='row'>
+                <div class='col-3 product_name'>
+                </div>
+                <div class='col-2 in_stock'>
+                </div>
+                <div class='col-2 price_per_item'>
+                
+                </div>
+                <div class='col-2 submitted'>
 
+                </div>
+                <div class='col-2 total_value'>
+                   <span class='total_value_label'>asd</input>
+
+                </div>
+              </div>
+          </div>
 
 
         </div>

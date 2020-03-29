@@ -17,7 +17,7 @@ $(document).on('click','#add_item_button', function()
 	// and name THIS item in sequence
 
 	$(x).attr('id','item_' + this_item);
-
+	$(x).addClass('item_row');
 	$('#items_div').append(x);
 	$(x).show();
 
@@ -40,4 +40,27 @@ $(document).on('keyup','.calc_field', function()
 	this_item.find('.total_value_label').html(total_price);
 	console.log('quantity,price,',quantity,price);
 
+	recalc_totals();
 });
+
+
+// We'll use this to calculate the totals.
+
+function recalc_totals()
+{
+	var order_price = 0;
+	var x = 0;
+	$('.item_row').each(function()
+	{	
+		console.log('total rows: ' +x);
+		var total_price = $(this).find('.total_value_label').html();
+		console.log('total_price',total_price);
+		console.log('old order price',order_price);
+		order_price += parseFloat(total_price);
+		console.log('new order price',order_price);
+		x++;
+	});
+
+	$('#total_calculation').find('.total_value_label').html(order_price);
+
+}
