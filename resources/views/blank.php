@@ -364,10 +364,10 @@
                   <input class='product_name_input form-control'></input>
                 </div>
                 <div class='col-2 in_stock'>
-                    <input class='in_stock_input form-control'></input>
+                    <input class='in_stock_input form-control calc_field'></input>
                 </div>
                 <div class='col-2 price_per_item'>
-                   <input class='price_per_item_input form-control'></input>
+                   <input class='price_per_item_input form-control calc_field'></input>
 
                 </div>
                 <div class='col-2 submitted'>
@@ -375,7 +375,7 @@
 
                 </div>
                 <div class='col-2 total_value'>
-                   <input class='total_value_input form-control '></input>
+                   <span class='total_value_label'>placehold</input>
 
                 </div>
               </div>

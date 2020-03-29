@@ -20,4 +20,24 @@ $(document).on('click','#add_item_button', function()
 
 	$('#items_div').append(x);
 	$(x).show();
+
+});
+
+// alright, so if a user types something in a calc field
+// we'll want to update the value in that row, and the totals
+
+$(document).on('keyup','.calc_field', function()
+{
+	console.log("calc field changed");
+
+	// lets grab the parent row
+	var this_item = $(this).parent().parent();
+	console.log(this_item);
+	var quantity = this_item.find('.in_stock_input').val();
+	var price = this_item.find('.price_per_item_input').val();
+
+	var total_price = quantity * price;
+	this_item.find('.total_value_label').html(total_price);
+	console.log('quantity,price,',quantity,price);
+
 });
