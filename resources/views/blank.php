@@ -334,6 +334,27 @@
           <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
 
+          <div class='col-10 offset-1 well'>
+            <div class='row'>
+                <div class='col-3'>
+                  Product Name
+                </div>
+                <div class='col-2'>
+                  Quantity in Stock
+                </div>
+                <div class='col-2'>
+                  Price Per Item
+                </div>
+                <div class='col-2'>
+                  Datetime Submitted
+                </div>
+                <div class='col-2'>
+                  Total value number
+                </div>
+            </div>
+          </div>
+
+
 
         </div>
         <!-- /.container-fluid -->
