@@ -331,11 +331,14 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <div class='col-10 offset-1'>
+           <h1 class="h3 mb-4 text-gray-800">Order Calculator</h1>
+          </div>
 
-
-          <div class='col-10'>
+          <div class='col-10 offset-1'>
             <a id='add_item_button' class='btn btn-lg btn-primary text-white'>Add New Item</a>
+
+             <a id='submit_order_button' class='btn btn-lg btn-danger text-white'>Place Order</a>
           </div>
           <BR>
           <div class='col-10 offset-1 well'>
@@ -356,6 +359,10 @@
                   Total value number
                 </div>
             </div>
+          </div>
+
+          <div class='col-10 offset-1'>
+            <hr>
           </div>
 
           <div id='sample_item' class='col-10 offset-1' style='display:none;'>
@@ -384,6 +391,12 @@
           <div id='items_div'>
           </div>
 
+
+          <div class='col-10 offset-1'>
+            <hr>
+          </div>
+          
+
           <div id='total_calculation' class='col-10 offset-1'>
             <div class='row'>
                 <div class='col-3 product_name'>
@@ -394,11 +407,10 @@
                 
                 </div>
                 <div class='col-2 submitted'>
-
+                    Total Order Price
                 </div>
                 <div class='col-2 total_value'>
                    <span class='total_value_label'></input>
-
                 </div>
               </div>
           </div>
