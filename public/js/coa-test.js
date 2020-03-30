@@ -87,13 +87,18 @@ function submit_order()
 
 	var submit = {};
 	var items = [];
+
+	//cycle through each item
 	$('.item_row').each(function()
 	{
+		// find the attributes and add them to a JS object
 		var new_item = {};
 		new_item.id = $(this).attr('id');
 		new_item.quantity = parseInt($(this).find('.in_stock_input').val());
 		new_item.price = parseFloat($(this).find('.price_per_item_input').val());
 		new_item.name = $(this).find('.product_name_input').val();
+		
+		// add that item to an array
 		items.push(new_item);
 		
 	});
@@ -102,6 +107,7 @@ function submit_order()
 	var json_items = JSON.stringify(items);
 	console.log('json items',json_items);
 
+	// use ajax to submit the order
 	$.ajax({
 		url : "/submit_order",
 		type : "GET",
