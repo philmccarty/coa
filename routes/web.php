@@ -16,7 +16,26 @@ Route::get('/', function () {
 });
 
 
+use Illuminate\Http\Request;
+
 Route::get('/test', function()
 {
 	return view('blank');
+});
+
+Route::get('/submit_order', function(Request $request)
+{
+	$order = $request->all();
+
+	$json_order = json_encode($order);
+
+	$now = new Datetime;
+	$filename = "order-" . $now->format('Y-m-d') . ".json";
+	$fn = fopen($filename,"w+");
+	fwrite($fn,$json_order);
+	fclose($fn);
+
+	$path_to_file = $filename;
+
+	return response()->download($path_to_file);
 });

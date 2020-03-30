@@ -67,3 +67,66 @@ function recalc_totals()
 	$('#total_calculation').find('.total_value_label').html(order_price);
 
 }
+
+$(document).on('click','#submit_order_button', function()
+{
+
+	submit_order();
+});
+
+function submit_order()
+{
+	console.log('submit order');
+	if($('.item_row').length ==0)
+	{
+		alert("You need to add some items, first.");
+		return;
+
+
+	}
+
+	var submit = {};
+	var items = [];
+	$('.item_row').each(function()
+	{
+		var new_item = {};
+		new_item.id = $(this).attr('id');
+		new_item.quantity = parseInt($(this).find('.in_stock_input').val());
+		new_item.price = parseFloat($(this).find('.price_per_item_input').val());
+		new_item.name = $(this).find('.product_name_input').val();
+		items.push(new_item);
+		
+	});
+
+	console.log(items);
+	var json_items = JSON.stringify(items);
+	console.log('json items',json_items);
+
+	$.ajax({
+		url : "/submit_order",
+		type : "GET",
+		data : {
+			items : json_items
+		},
+		dataType : 'json',
+		success: function(results)
+		{
+			console.log(results);
+		//	show_results(results);
+
+		},
+		error : function(results)
+		{
+			console.log('errror');
+			
+		},
+		failure: function(results)
+		{
+			console.log(results);
+		}
+	});
+
+
+}
+
+
